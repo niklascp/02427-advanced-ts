@@ -33,15 +33,15 @@ library(ggplot2)
 generate_plots <- function(df, prefix) {
     gg <- ggplot(df) +
         geom_line(aes(x = t, y = Y1))
-    ggsave(paste0(prefix, '-Y1.pdf'), plot = gg, width = 5, height = 3)
+    ggsave(paste0(prefix, '-Y1.png'), plot = gg, width = 5, height = 3)
 
     gg <- ggplot(df) +
         geom_line(aes(x = t, y = Y2))
-    ggsave(paste0(prefix, '-Y2.pdf'), plot = gg, width = 5, height = 3)
+    ggsave(paste0(prefix, '-Y2.png'), plot = gg, width = 5, height = 3)
 
     gg <- ggplot(df) +
         geom_point(aes(x = Y1, y = Y2))
-    ggsave(paste0(prefix, '-Y1Y2.pdf'), plot = gg, width = 5, height = 3)
+    ggsave(paste0(prefix, '-Y1Y2.png'), plot = gg, width = 5, height = 3)
 }
 
 generate_plots(df_1, 'latex/part1a-sigma0')
